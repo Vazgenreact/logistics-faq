@@ -1,0 +1,80 @@
+.cross {
+    cursor: pointer;
+    overflow: hidden;
+    width: 12px;
+    height: 12px;
+    display: block;
+
+    svg {
+        width: 12px;
+        height: 12px;
+        transition: transform 0.3s;
+    }
+
+    &:hover:not(&--plus):not(&--box) {
+        svg {
+            transform: rotate(90deg);
+        }
+    }
+
+    &--plus {
+        border: 1px solid $font-color-main;
+        border-radius: 50%;
+        position: relative;
+        width: 26px;
+        height: 26px;
+        svg {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 80%;
+            height: 80%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+
+        &_small {
+            width: 16px;
+            height: 16px;
+
+            svg {
+                fill: $font-color-main;
+            }
+        }
+
+        &_center {
+            @include center;
+        }
+
+        &_little {
+            width: 11px;
+            height: 11px;
+            transform: rotate(45deg);
+        }
+    }
+
+    &--silver {
+        svg {
+            width: 16px;
+            height: 16px;
+            fill: $font-color-silver;
+        }
+    }
+
+    &--box {
+        width: 20px;
+        height: 20px;
+        border-radius: 3px;
+        background-color: $silver-normal;
+        position: relative;
+
+        svg {
+            @include center;
+        }
+
+        &:hover {
+            svg {
+                transform: translate(-50%, -50%) rotate(90deg);
+            }
+        }
+    }
+}

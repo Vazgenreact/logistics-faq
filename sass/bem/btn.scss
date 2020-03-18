@@ -1,0 +1,115 @@
+.btn {
+    cursor: pointer;
+    background-color: $u-orange;
+    font-size: $font-size-main;
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 3px;
+    color: #000;
+    display: block;
+    max-width: 100%;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 13px 15px;
+    padding-bottom: 11px;
+    box-sizing: border-box;
+
+    svg {
+        fill: $font-color-main;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    &--pink {
+        background-color: $u-pink;
+    }
+
+    &--arrow {
+        svg {
+            transform: translate(0, -1px);
+        }
+
+        &_disabled {
+            background-color: $silver-normal;
+            color: $font-color-silver;
+            cursor: not-allowed;
+
+            svg {
+                fill: $font-color-silver;
+            }
+        }
+    }
+
+    &--vk {
+        background-color: $u-white;
+        border: 1px solid $color-vk;
+        transition: 0.3s;
+        font-weight: 400;
+
+        svg {
+            width: 21px;
+            height: 11px;
+            transform: translate(0, -2px);
+            fill: $color-vk;
+            transition: 0.3s;
+            margin-right: 5px;
+        }
+
+        &:hover {
+            background-color: $color-vk;
+            color: $u-white;
+
+            svg {
+                fill: $u-white;
+            }
+        }
+    }
+
+    &--border {
+        border: 1px solid $font-color-main;
+        background-color: $u-white;
+
+        &_silver {
+            border-color: $silver-big;
+        }
+
+        &_disabled {
+            color: $font-color-silver;
+            border-color: $silver-big;
+        }
+    }
+
+    &--transparent {
+        background-color: transparent;
+    }
+
+    &--right {
+        margin-left: auto;
+        margin-right: 0;
+    }
+
+    &--check {
+
+        svg {
+            width: 15px;
+            height: 15px;
+            transform: translate(0, -2px);
+            transition: 0.3s;
+            margin-right: 5px;
+        }
+
+        &_disabled {
+            color: $font-color-silver;
+            svg {
+                fill: $font-color-silver;
+            }
+        }
+    }
+
+    &--inline {
+        display: inline-block;
+    }
+}

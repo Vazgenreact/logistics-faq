@@ -1,0 +1,44 @@
+.marker {
+    cursor: pointer;
+    overflow: hidden;
+    width: 12px;
+    height: 12px;
+    display: block;
+    transform: scale(-1, 1);
+
+    svg {
+        width: 12px;
+        height: 12px;
+        transition: 0.3s;
+    }
+
+        &:hover {
+            svg {
+                fill: $font-color-green;
+            }
+        }
+
+    &--box {
+        width: 20px;
+        height: 20px;
+        border-radius: 3px;
+        background-color: $silver-normal;
+        position: relative;
+
+        &:after {
+            z-index: 2;
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background-color: $silver-normal;
+            bottom: 17%;
+            left: 0;
+        }
+
+        svg {
+            @include center;
+            z-index: 1;
+        }
+    }
+}

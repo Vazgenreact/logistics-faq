@@ -1,0 +1,103 @@
+.select {
+    appearance: none;
+    border-radius: 3px;
+    border: 1px solid $silver-big;
+    padding: 8px 20px;
+    position: relative;
+    box-sizing: border-box;
+    padding-right: 35px;
+    background-color: $u-white;
+
+    &:after {
+        content: '';
+        position: absolute;
+        display: block;
+        top: 50%;
+        right: 10px;
+        transform: translate(0, -50%) rotate(90deg);
+        width: 20px;
+        height: 20px;
+        background-image: url(../img/arrow.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: auto 100%;
+        opacity: 0.7;
+    }
+
+    strong {
+        font-size: 22px;
+        font-weight: 700;
+    }
+
+    span {
+        font-size: 22px;
+        font-weight: 300;
+    }
+
+    small {
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    b {
+        font-weight: inherit;
+    }
+
+    &--active:after {
+        transform: translate(0, -50%) rotate(-90deg);
+    }
+
+    &__list {
+        background-color: $u-white;
+        display: none;
+        position: absolute;
+        left: -1px;
+        top: 100%;
+        min-width: 100%;
+        z-index: 100;
+        border: 1px solid $silver-big;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    &--small {
+        padding-top: 9px;
+        padding-bottom: 9px;
+    }
+
+    &__param {
+        transform: translate(0, 1px);
+    }
+
+    &__item {
+        text-align: left;
+        padding-left: 20px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $silver-min;
+        }
+    }
+
+    &--inline {
+        display: inline-block;
+        padding-left: 15px;
+        padding-right: 35px;
+    }
+}
+
+/*Мобильные*/
+@media (max-width: $tablet-width - 2) {
+    .select {
+        padding-left: 12px;
+        font-size: $font-size-small;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        &__item {
+            padding-left: 12px;
+        }
+    }
+}

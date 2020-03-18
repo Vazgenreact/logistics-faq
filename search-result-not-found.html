@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>ZZ-logistics FAQ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+    <!-- Это спрайт c svg иконками -->
+    <div class="none"><include src="build/img/sprite.svg"></include></div>
+
+    <div class="site">
+        <div class="site__nav">
+            <aside class="nav">
+                <a class="nav__logo" href="/">
+                    <img src="img/logo.png">
+                    <span>часто задаваемые вопросы</span>
+                </a>
+                <form action="#" method="post" class="nav__search">
+                    <input type="text" class="input nav__input-search" name="search" placeholder="Ваш вопрос">
+                    <button type="submit" class="nav__btn-search"><svg><use xlink:href="#search"></use></svg></button>
+                </form>
+                <button type="button" class="nav__burger"></button>
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Вопрос 1</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Вопрос 2</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link  nav__link--active">Оформление заказа на выкуп</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Вопрос 3</a>
+                        <ul class="nav__items">
+                            <li>
+                                <a href="#">Тема 1</a>
+                            </li>
+                            <li>
+                                <a href="#">Тема 2</a>
+                            </li>
+                            <li>
+                                <a href="#">Тема 3</a>
+                            </li>
+                            <li>
+                                <a href="#">Тема 4</a>
+                            </li>
+                            <li>
+                                <a href="#">Тема 5</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Вопрос 3</a>
+                        <ul class="nav__items">
+                            <li>
+                                <a href="#">Тема 1</a>
+                            </li>
+                            <li>
+                                <a href="#">Тема 2</a>
+                            </li>
+                            <li>
+                                <a href="#">Тема 3</a>
+                            </li>
+                            <li>
+                                <a href="#">Тема 4</a>
+                            </li>
+                            <li>
+                                <a href="#">Тема 5</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Вопрос 5</a>
+                        <ul class="nav__items">
+                            <li>
+                                <a href="#">Длинная тема чего-то там</a>
+                            </li>
+                            <li>
+                                <a href="#">Тема 2</a>
+                            </li>
+                            <li>
+                                <a href="#">Тема 3</a>
+                            </li>
+                            <li>
+                                <a href="#">Тема 4</a>
+                            </li>
+                            <li>
+                                <a href="#">Тема 5</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Вопрос 6</a>
+                    </li>
+                </ul>
+            </aside>
+        </div>
+        <div class="site__content">
+            <div class="content">
+                <h1 class="content__title  content__title--icon">
+                    <img src="img/search-img.png">
+                    <b>Результаты поиска</b>
+                </h1>
+                <div class="not-found-search">
+                    <form action="#" method="post" class="nav__search">
+                        <input type="text" class="input nav__input-search" name="search" value="Lorem ipsum">
+                        <button type="submit" class="nav__btn-search">
+                            <svg><use href="#search"></use></svg>
+                        </button>
+                    </form>
+                </div>
+                <div class="not-found">
+                    <div class="mr-30">
+                        <button type="submit" class="nav__btn-search">
+                            <svg><use href="#search"></use></svg>
+                        </button>
+                    </div>
+                    <div>
+                        <strong class="text--uppercase text--bold">Статьи не найдены</strong>
+                        <p class="text">Попробуйте изменить параметры поиска</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="#head" class="top"><svg><use xlink:href="#top"></use></svg></a>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script>
+        $('.nav__burger').click(function(){
+            $(this).toggleClass('nav__burger--active');
+            $('.nav__list').toggleClass('nav__list--active');
+        });
+
+        $('.top').click(function(e){
+            e.preventDefault();
+            var elementClick = $(this).attr("href")
+            var destination = $(elementClick).offset().top;
+                $("html:not(:animated),body:not(:animated)").animate({
+                    scrollTop: destination
+                }, 800);
+            return false;
+        });
+    </script>
+</body>
+</html>

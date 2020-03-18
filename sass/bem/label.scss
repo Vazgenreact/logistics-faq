@@ -1,0 +1,55 @@
+.label {
+    display: block;
+    position: relative;
+
+    span {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    &--margin-bottom {
+        &_small {
+            margin-bottom: 25px;
+        }
+    }
+
+    &--margin-top {
+        &_small {
+            margin-top: 25px;
+        }
+    }
+
+    &--flex {
+        @include flex(wrap);
+    }
+
+    &__input {
+        margin-bottom: 10px;
+    }
+
+    &__text {
+        &--margin {
+            &_minus {
+                margin-bottom: -10px;
+            }
+        }
+    }
+
+    &__help {
+        position: absolute;
+        right: 0;
+        top: 2px;
+
+        svg {
+            width: 12px;
+            height: 12px;
+            transition: 0.3s;
+        }
+
+        &:hover {
+            svg {
+                fill: $font-color-green;
+            }
+        }
+    }
+}

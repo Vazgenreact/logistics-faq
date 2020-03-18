@@ -1,0 +1,48 @@
+.pagination {
+    @include clear-ul;
+    @include flex;
+    justify-content: flex-start;
+    align-items: stretch;
+
+    &__item {
+        margin-right: 10px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__link {
+        background-color: $u-white;
+        color: $font-color-main;
+        border-radius: 3px;
+        border: 1px solid transparent;
+        box-sizing: border-box;
+        text-align: center;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        display: block;
+        transition: border-color 0.3s;
+
+        svg {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        &:hover:not(&--active) {
+            border-color: $font-color-silver;
+        }
+
+        &--active {
+            border-color: $font-color-main;
+        }
+    }
+}
+
+
+/*Мобильные*/
+@media (max-width: $tablet-width - 2) {
+    .pagination {
+        justify-content: center;
+    }
+}

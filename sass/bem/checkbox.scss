@@ -1,0 +1,45 @@
+.checkbox {
+    span {
+        position: relative;
+        display: block;
+        padding-left: 32px;
+
+        &:before,
+        &:after {
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            content: '';
+            left: 0;
+            top: -2px;
+            border: 1px solid $silver-big;
+            border-radius: 3px;
+        }
+
+        &:after {
+            border: none;
+            background: url(../img/check.svg) no-repeat center;
+            background-size: 75% 75%;
+            left: 1px;
+            top: -1px;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+    }
+
+    &:hover {
+        input:not(:disabled):not(:checked) + span {
+            &:after {
+                opacity: 0.3;
+            }
+        }
+    }
+
+    input:checked + span:after {
+        opacity: 0.9;
+    }
+
+    input:disabled + span {
+        color: $font-color-silver;
+    }
+}

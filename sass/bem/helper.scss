@@ -1,0 +1,41 @@
+.helper {
+    position: relative;
+
+    &:after {
+        display: none;
+        content: attr(data-help);
+        position: absolute;
+        z-index: 10;
+        left: 100%;
+        top: -100%;
+        background-color: $u-white;
+        padding: 5px 10px;
+        font-size: $font-size-little;
+        color: $font-color-main;
+        box-shadow: 0 2px 6px 0 $silver-big;
+    }
+
+    &:hover {
+        &:after {
+            display: block;
+        }
+    }
+
+    &--big {
+        &:after {
+            width: 260px;
+        }
+    }
+
+    &--delit {
+        &:after {
+            width: 80px;
+        }
+    }
+
+    &--right {
+        &:after {
+            left: auto;
+        }
+    }
+}

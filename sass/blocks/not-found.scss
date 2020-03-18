@@ -1,0 +1,46 @@
+.not-found {
+  display: flex;
+  align-items: center;
+  padding: 50px 45px;
+  border: 1px dashed #bfbfbf;
+
+  .nav__btn-search {
+    border-color: #bfbfbf;
+    &:hover {
+      border-color: $u-orange;
+    }
+  }
+  svg {
+    fill: #bfbfbf;
+  }
+  .text--uppercase {
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+
+  @include mobile {
+    padding: 20px 30px;
+  }
+}
+.not-found-search {
+  padding: 0 50px;
+  margin-bottom: 50px;
+
+  @include mobile {
+    padding: 0;
+  }
+
+  .nav__btn-search {
+    border-color: $u-orange;
+    &:hover {
+      border-color: $font-color-main;
+
+      svg {
+        fill: $font-color-main;
+      }
+    }
+  }
+  svg {
+    fill: $u-orange;
+  }
+}

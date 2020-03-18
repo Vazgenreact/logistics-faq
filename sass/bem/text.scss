@@ -1,0 +1,178 @@
+.text {
+    margin: 0;
+
+    &--content {
+        padding-left: 45px;
+        padding-right: 45px;
+        margin-top: 15px;
+
+        &:first-of-type {
+            margin-top: 0;
+        }
+
+        @include mobile {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+
+    &--paragraph {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    &--uppercase {
+        text-transform: uppercase;
+    }
+
+    /*Жирность*/
+    &--regular {
+        font-weight: 400;
+    }
+
+    &--bold {
+        font-weight: 700;
+    }
+
+    /*Размеры*/
+    &--little {
+        font-size: $font-size-little;
+    }
+
+    &--small {
+        font-size: $font-size-small;
+    }
+
+    &--normal {
+        font-size: $font-size-main;
+    }
+
+    &--big {
+        font-size: $font-size-big;
+    }
+
+    &--max {
+        font-size: $font-size-max;
+    }
+
+    /*Цвета*/
+    &--main {
+        color: $font-color-main;
+    }
+
+    &--silver {
+        color: $font-color-silver;
+    }
+
+    &--blonde {
+        color: $font-color-blonde;
+    }
+
+    &--error {
+        color: $font-color-red;
+
+        a {
+            color: inherit;
+            text-decoration: underline;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    &--green {
+        color: $font-color-green;
+    }
+
+    &--align {
+
+        &_center {
+            text-align: center;
+        }
+
+        &_right {
+            text-align: right;
+        }
+    }
+
+    &--box {
+        padding: 10px 25px;
+        display: inline-block;
+        border-radius: 3px;
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+
+    &--background {
+        &_silver {
+            &_normal {
+                background-color: $silver-normal;
+            }
+        }
+    }
+
+    &__link {
+        color: inherit;
+        text-decoration: underline;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    &__bold {
+        font-weight: 700;
+    }
+
+    &--icon {
+        @include flex;
+        justify-content: flex-start;
+        svg {
+            width: 38px;
+            height: 38px;
+            margin-right: 10px;
+        }
+    }
+}
+
+
+/*Планшет*/
+@media (max-width: $desctop-width - 1) {
+    .text {
+        &--big_tablet {
+            font-size: $font-size-big;
+        }
+
+        &--little_tablet {
+            font-size: $font-size-little;
+        }
+    }
+}
+
+/*Мобильные*/
+@media (max-width: $tablet-width - 2) {
+    .text {
+
+        &--normal_mobile {
+            font-size: $font-size-main;
+        }
+
+        &--small_mobile {
+            font-size: $font-size-small;
+        }
+
+        &--little_mobile {
+            font-size: $font-size-little;
+        }
+
+        &--icon {
+            svg {
+                min-width: 30px;
+                min-height: 30px;
+            }
+
+            br {
+                display: none;
+            }
+        }
+    }
+}

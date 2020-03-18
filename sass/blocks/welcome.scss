@@ -1,0 +1,61 @@
+.welcome-content {
+  padding-top: 100px;
+  height: 90vh;
+
+  @media (max-width: 1240px) {
+    padding-top: 0;
+  }
+}
+.welcome {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 600px;
+  margin-bottom: 50px;
+  background-image: url(../img/welcome-bg.png);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  &__header {
+    flex-basis: 40%;
+    padding-top: 16%;
+    padding-left: 14%;
+  }
+
+  &__title {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    align-self: flex-end;
+    padding: 0 14% 5%;
+  }
+
+  @include mobile {
+    min-height: 450px;
+
+    &__header {
+      flex-basis: 100%;
+    }
+    &__text {
+      padding: 0;
+    }
+  }
+}
+
+.logos {
+  flex-basis: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 3%;
+
+  img {
+    height: 50px;
+    margin: 0 10px;
+  }
+}

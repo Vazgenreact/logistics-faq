@@ -1,0 +1,28 @@
+body {
+    font-family: $main-font;
+    font-weight: 300;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    color: $font-color-main;
+    background-color: $u-white;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+input,
+button,
+select,
+textarea {
+    font-family: $main-font;
+    color: $font-color-main;
+}
+input,
+textarea,
+select {
+    appearance: none;
+    border-radius: 0;
+    background-color: $u-white;
+}

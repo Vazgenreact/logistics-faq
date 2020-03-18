@@ -1,0 +1,53 @@
+.content {
+    width: 840px;
+
+    @media (max-width: 1240px) {
+        margin: 0 auto;
+        width: 768px;
+        box-sizing: border-box;
+    }
+
+    @include mobile {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    &__box {
+        background-color: $u-white;
+        padding-bottom: 30px;
+    }
+
+    &__title {
+        margin-left: 42px;
+        font-size: 26px;
+        text-transform: uppercase;
+        font-weight: 300;
+        margin-top: 0;
+        min-height: 70px;
+        margin-bottom: 30px;
+
+        @include mobile {
+            margin-left: 15px;
+            font-size: 18px;
+        }
+
+        b {
+            font-weight: 700;
+        }
+
+        &--icon {
+            @include flex(nowrap, flex-start, center);
+
+            img {
+                margin-right: 24px;
+                width: 47px;
+                height: auto;
+
+                @include mobile {
+                    width: 35px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}

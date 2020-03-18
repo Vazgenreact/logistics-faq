@@ -1,0 +1,36 @@
+@import "standarts/variables.scss";
+@import "standarts/mixins.scss";
+
+/*Библиотеки*/
+@import "libs/normalize.scss";
+@import "libs/fonts.scss";
+/*@import "libs/slick.scss";*/
+
+/*Основные*/
+@import "standarts/main.scss";
+
+/*БЭМ-блоки*/
+@import "bem/helper.scss";
+@import "bem/arrow.scss";
+@import "bem/btn.scss";
+@import "bem/cross.scss";
+@import "bem/marker.scss";
+@import "bem/input.scss";
+@import "bem/select.scss";
+@import "bem/textarea.scss";
+@import "bem/checkbox.scss";
+@import "bem/text.scss";
+@import "bem/label.scss";
+@import "bem/numbered-list.scss";
+@import "bem/top.scss";
+
+/*Блоки в сайте*/
+@import "blocks/site.scss";
+@import "blocks/nav.scss";
+@import "blocks/content.scss";
+@import "blocks/not-found.scss";
+@import "blocks/search-result.scss";
+@import "blocks/welcome.scss";
+
+/*Помощники*/
+@import "libs/helpers.scss";
