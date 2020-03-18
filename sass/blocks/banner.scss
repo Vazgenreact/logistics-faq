@@ -1,0 +1,38 @@
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 35px 20px 45px;
+  margin: 30px 0;
+  background-image: url(../img/baner.png);
+  background-size: cover;
+  min-height: 350px;
+  box-sizing: border-box;
+  text-align: center;
+
+  &__title {
+    color: #fff;
+    font-size: 22px;
+  }
+  &__more {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    color: #000;
+    font-size: 16px;
+    background-color: $color-qiwi;
+    border-radius: 5px;
+
+    &::after {
+      content: '';
+      width: 6px;
+      height: 6px;
+      margin-left: 10px;
+      border-right: 2px solid #000;
+      border-bottom: 2px solid #000;
+      transform: rotate(-45deg);
+    }
+  }
+}
